@@ -4,3 +4,5 @@ function whoIsPaying(names) {
     var randomName = names[randomPersonPosition];
     return randomName = " is going...."
 }
+
+
