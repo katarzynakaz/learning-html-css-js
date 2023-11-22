@@ -1,0 +1,22 @@
+// console.log("Hello world")
+
+// const myName = "Kaska"
+// let myAge = 35
+
+// console.log(myAge)
+
+// console.log("Hello world, my name is " + myName + " and my age is " + myAge + " years old.")
+
+// const mySentence = "Hello world, my name is " + myName + " and my age is " + myAge + " years old."
+
+// console.log(mySentence)
+// const mySentence = `Hello, my name is ${myName} and I am ${myAge} years old.`
+// console.log(mySentence)
+
+const num1 = 5
+const num2 = 12
+
+console.log(num1 / num2)
+
+const myPrompt = prompt("How old are you?");
+alert(myPrompt);
