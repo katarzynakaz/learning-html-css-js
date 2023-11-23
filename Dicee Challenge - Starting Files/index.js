@@ -1,14 +1,36 @@
-var randomNumber1 = getRandom;
+var randomNumber1 = Math.random;
+// 0-0.99999
 
-function getRandom(1, 6) {
-    return Math.floor(Math.random() * (max - min +1) + min));
+randomNumber1 = Math.floor(randomNumber1() * 6) + 1;
+// randomNumber1 = Math.floor(randomNumber1() * 6)  1 - 5, increase 
+
+// select random image 
+
+var randomDiceImage = "dice" + randomNumber1 + ".png";  //dice 1 to 6 png
+var randomImageSource = "Images/" + randomDiceImage; //images/dice 1-6
+
+// assign random image
+
+var image1 = document.querySelectorAll("img")[0];
+
+image1.setAttribute("src", randomImageSource);
+
+
+var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+// assign
+var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
+
+document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
+
+
+
+if (randomNumber1 > randomNumber2) {
+    document.querySelector("h1").innerHTML = "Player 1 wins!"
+}
+else if (randomNumber2 > randomNumber1) {
+    document.querySelector("h1").innerHTML = "Player 2 wins!"
 }
 
-// Use the random number you created in the last step to pick out a 
-// random dice image between dice1.png to dice 6.png then place this image inside the left <img> element.
-
-// create array of images
-
-
-//select random image from array
-document.querySelector("img1").setAttribute("a href = ")
+else if (randomNumber1 === randomNumber2) {
+    document.querySelector("h1").innerHTML = "Draw! Try again!"
+}
