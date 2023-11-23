@@ -11,4 +11,4 @@ function handleClick() {
     alert("I got clicked");
 }
 
-// while btn clieed run handleClick , can also be an annonymos function
+// while btn clieed run handleClick , can also be an annonymos function written as funciton() {}
