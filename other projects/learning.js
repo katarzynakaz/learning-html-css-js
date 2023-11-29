@@ -58,11 +58,11 @@ if (numberOfCats > 5) {
   
 
 
-  function feedLaserTreats(plannedTreats, actualTreats) {
+  function feedCatTreats(plannedTreats, actualTreats) {
     if (actualTreats === 1) {
-      return "Hole-in-one!";
+      return "Is it your cat's birthday?";
     } else if (actualTreats <= plannedTreats - 2) {
-      return "Eagle";
+      return "The weight loss is going well";
     } else if (actualTreats === plannedTreats - 1) {
       return "Birdie";
     } else if (actualTreats === plannedTreats) {
@@ -72,7 +72,7 @@ if (numberOfCats > 5) {
     } else if (actualTreats === plannedTreats + 2) {
       return "Double Bogey";
     } else {
-      return "Go Home!";
+      return "";
     }
   }
 
@@ -240,3 +240,43 @@ function chainToSwitch(val) {
     // It's like directly knowing who crossed the finish line first without needing a judge to decide
     return runnerA < runnerB;
   }
+
+let treatsPlanned = prompt("How many treats did you plan to feed your cat today?");
+let treatsFed = prompt("How many treats did your cat trick you into getting?")
+
+
+  function feedCatTreats(plannedTreats, actualTreats) {
+    if (actualTreats === 1) {
+      return "Wow";
+    } else if (actualTreats <= plannedTreats - 2) {
+      return "The weight loss is going well";
+    } else if (actualTreats === plannedTreats - 1) {
+      return "Birdie";
+    } else if (actualTreats === plannedTreats) {
+      return "Par";
+    } else if (actualTreats === plannedTreats + 1) {
+      return "Bogey";
+    } else if (actualTreats === plannedTreats + 2) {
+      return "Double Bogey";
+    } else {
+      return "";
+    }
+  }
+
+
+let treatsPlanned = prompt("How many treats did you plan to feed your cat today?");
+let treatsFed = prompt("How many treats did your cat trick you into getting?");
+
+function feedCatTreats(plannedTreats, actualTreats) {
+  if (plannedTreats === actualTreats) {
+     return "Right on target, treat master!";
+  } else if (actualTreats >= plannedTreats) {
+     return "Oops, one treat too many!";
+  } else if (actualTreats <= plannedTreats) {
+     return "That's impossible!";
+
+  }
+}
+
+let result = feedCatTreats;
+alert(result);
