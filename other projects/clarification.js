@@ -64,6 +64,12 @@ function cc(card) {
   return count + " " + playerAction();
 
 
+
+
+
+
+
+
 //   In a fruit market, you are tasked with keeping track of banana bunches based on their size. There are three categories:
 
 //   Small Bunches: Each small bunch has 1 to 3 bananas.
@@ -93,28 +99,30 @@ function bananaBunchC(numberOfBananas){
     return tally;
 }
 let score = 0;
-function tallyColors {
+function tallyFlowerColors(color) {
+    let addition = 0;
+    switch (color) {
+        case "red":
+        addition += 2;
+        break;
+        case "blue":
+        addition += 1;
+        break;
+        case "yellow":
+        addition -= 1;
+        break;
+    }
 
-    function calculate
-    // if red tally +=2 
-    // if blue += 1
-    // if yellow -= 1
-    
-    
-    
-    
-    
-    
-    return tally;
+    score += addition;
+    return score;
+
 }
-
-
-
 // Problem: "Flower Color Tally"
 
-In a garden, you are observing flowers of different colors. Your task is to write a JavaScript function that helps in 
-tallying the colors of the flowers. There are three primary colors to consider:
+// In a garden, you are observing flowers of different colors. Your task is to write a JavaScript function that helps in 
+// tallying the colors of the flowers. There are three primary colors to consider:
 
-Red Flowers: Each red flower counts as 2 points.
-Blue Flowers: Each blue flower counts as 1 point.
-Yellow Flowers: Each yellow flower deducts 1 point.
+// Red Flowers: Each red flower counts as 2 points.
+// Blue Flowers: Each blue flower counts as 1 point.
+// Yellow Flowers: Each yellow flower deducts 1 point.
+
