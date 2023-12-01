@@ -6,12 +6,19 @@ function whoIsPaying(names) {
 }
 
 
-function feedTheCat(whenCatReallyHungry) {
-    if (whenCatReallyHungry) {
-        return "Cat needs to be fed.";
-    }
-    return "Cat is lying.";
+function feedTheCat(sound) {
+    switch (sound) {
+      case "meow":
+      return "Cat needs to be fed.";
+      break;
+      case "no meow":
+        return "Cat is full.";
+        break;
+        default:
+          return "Who knows."
 }  
+}
+
 
 == equal
 = assigns var on left to value on right
@@ -57,24 +64,6 @@ if (numberOfCats > 5) {
   else if is more specific 
   
 
-
-  function feedCatTreats(plannedTreats, actualTreats) {
-    if (actualTreats === 1) {
-      return "Is it your cat's birthday?";
-    } else if (actualTreats <= plannedTreats - 2) {
-      return "The weight loss is going well";
-    } else if (actualTreats === plannedTreats - 1) {
-      return "Birdie";
-    } else if (actualTreats === plannedTreats) {
-      return "Par";
-    } else if (actualTreats === plannedTreats + 1) {
-      return "Bogey";
-    } else if (actualTreats === plannedTreats + 2) {
-      return "Double Bogey";
-    } else {
-      return "";
-    }
-  }
 
 
 //   switch
@@ -241,28 +230,8 @@ function chainToSwitch(val) {
     return runnerA < runnerB;
   }
 
-let treatsPlanned = prompt("How many treats did you plan to feed your cat today?");
-let treatsFed = prompt("How many treats did your cat trick you into getting?")
 
-
-  function feedCatTreats(plannedTreats, actualTreats) {
-    if (actualTreats === 1) {
-      return "Wow";
-    } else if (actualTreats <= plannedTreats - 2) {
-      return "The weight loss is going well";
-    } else if (actualTreats === plannedTreats - 1) {
-      return "Birdie";
-    } else if (actualTreats === plannedTreats) {
-      return "Par";
-    } else if (actualTreats === plannedTreats + 1) {
-      return "Bogey";
-    } else if (actualTreats === plannedTreats + 2) {
-      return "Double Bogey";
-    } else {
-      return "";
-    }
-  }
-
+ 
 
 let treatsPlanned = prompt("How many treats did you plan to feed your cat today?");
 let treatsFed = prompt("How many treats did your cat trick you into getting?");

@@ -1,5 +1,5 @@
-Here is a sample of using dot notation (.) to read an object's property:
-// so to create a property ( not property value) create a box, not put object in box
+// Here is a sample of using dot notation (.) to read an object's property:
+// so to create a property ( not property value) create a box, and not to put object in box
 
 const myObj = {
   prop1: "val1",
@@ -146,18 +146,35 @@ function checkForProperty(object, property) {
   }
 
 
-  
+
   Problem: "Student Grade Lookup"
 
-You have a JavaScript object that represents the final grades of students in a class. Each student's name is mapped to their final grade. Your task is to write a function called findStudentGrade that takes two parameters: a student's name and the grades object. The function should check if the student's name exists in the grades object. If it does, the function should return the student's grade. If the student's name is not in the object, the function should return "Student not found".
+You have a JavaScript object that represents the final grades of students in a class. 
+Each student's name is mapped to their final grade. Your task is to write a function called 
+findStudentGrade that takes two parameters: a student's name and the grades object. The function 
+should check if the student's name exists in the grades object. If it does, the function should 
+return the student's grade. If the student's name is not in the object, the function should return 
+"Student not found".
 
 The grades object might look something like this:
 
-javascript
-Copy code
-const classGrades = {
-  "Alice": "A",
-  "Bob": "B",
-  "Charlie": "C",
-  // more students and grades
-};
+
+// function findStudentGrade(name, grade) {    
+//     // define object 
+//     const classGrades = {
+//         "Alice": "A",
+//         "Bob": "B",
+//         "Charlie": "C",
+//         // more students and grades
+//       };
+
+
+//         if (name.hasOwnProperty(grade)) {
+//             return name[grade];
+//         } else { 
+//             return "Student not found";
+//         }
+//         }
+
+
+edit above incorrect

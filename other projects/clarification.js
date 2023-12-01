@@ -1,7 +1,7 @@
 // proper function syntax
 
 
-function determineBananaNumber(x) {
+function determinevalueOfCrypto(x) {
     let amount;
     if (x > 10) {
       amount = +1;
