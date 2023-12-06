@@ -249,3 +249,41 @@ function feedCatTreats(plannedTreats, actualTreats) {
 
 let result = feedCatTreats;
 alert(result);
+
+
+
+
+
+let planned = prompt("How many treats did you plan to feed your cat today?");
+  let actual = prompt("How many treats did your cat trick you into getting?");
+
+function feedCatTreats(planned, actual) {
+  
+  let treatDifference = actual - planned;
+  switch (true) {
+    case (treatDifference === 0):
+     return "Right on target, treat master!";
+     break;
+   case (treatDifference > 0): 
+     return "Oops, one treat too many!";
+     break;
+   case (treatDifference < 0):
+     return "That's impossible!!";
+     break;
+  default: 
+     return "Oh no, the cat stole all of them!";
+}
+}
+let result = feedCatTreats(Number(planned), Number(actual));
+alert(result);
+
+const myCat = {
+  "name": "Laser",
+  "color": "grey",
+    "kittens" {
+      "kitten1": "Pumpkin", 
+      "kitten2": "Bob",
+    }
+}
+
+console.log(myCat.name + "will have 2 kittens" + myCat.kittens)
