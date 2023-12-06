@@ -79,7 +79,6 @@ Return the updated classroom attendance after the operation.
 // return classroom;
 // }
 
-
 function markAttendance(classroom, studentID, date) {
     if (!classroom[studentID]) {
         // Add a new student entry if it does not exist
@@ -91,23 +90,6 @@ function markAttendance(classroom, studentID, date) {
 
     return classroom;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
