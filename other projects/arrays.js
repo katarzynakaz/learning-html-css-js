@@ -16,3 +16,17 @@ total += catTreats[i];
 // The for loop goes through each element of catTreats (each cat).
 // totalTreats += catTreats[i]; adds the treats of each cat to the total.
 // After the loop, totalTreats holds the sum of all treats given to the cats, just like the number in your notebook.
+
+
+function countBooks(bookstoreNetwork) {
+    let totalBooks = 0;
+    for (i = 0 ; i < bookstoreNetwork.length; i ++) {
+        for (j = 0; j < bookstoreNetwork[i].length; j ++) {
+            for (k = 0; k < bookstoreNetwork[i][j].length; k ++) {
+                    totalBooks += bookstoreNetwork[i][j][k];
+            }
+        }
+    }
+    
+    return totalBooks;
+}
