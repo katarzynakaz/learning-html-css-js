@@ -1,3 +1,5 @@
+functions
+
 function starWarsAdd(name) {
     return "Obi-one" + name;
  }
@@ -25,6 +27,12 @@ hey kaska ka
 
 
 
-
+function calculateBill( billAmount, taxRate = 0.13) {
+    console.log(billAmount,taxRate);
+    console.log('Running Calculate Bill!!');
+    const total = billAmount * (1 + taxRate);
+    return total;
+}
+Declaring fucntions
 
 

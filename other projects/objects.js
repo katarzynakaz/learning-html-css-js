@@ -178,3 +178,415 @@ The grades object might look something like this:
 
 
 edit above incorrect
+
+
+Exercise: Pet Store Inventory Management
+Scenario: You're managing a pet store's inventory. The store keeps 
+various types of pets, each identified by a unique ID. For each pet, the 
+store records its type (like "dog", "cat", "fish"), and the quantity of that pet 
+type currently in stock.
+
+The petStore inventory object could look like this:
+
+
+let petStore = {
+    1: { type: "dog", quantity: 5 },
+    2: { type: "cat", quantity: 3 },
+    3: { type: "fish", quantity: 10 }
+};
+Task: Write a function updateInventory that takes three parameters: petStore (the inventory object), 
+petID (the ID of the pet type), and additionalQuantity (the number of new pets of that type received by 
+    the store). The function should update the quantity of the specified pet type by adding the 
+    additionalQuantity. If the pet type with the given petID does not exist in the petStore, the 
+    function should add a new entry with petID, an assumed type of "Unknown", and the additionalQuantity
+     as its stock.
+
+Return the updated petStore inventory after the operation.
+
+
+// function updateInventory (petStore, petID, additionalQuantitiy) {
+//     if (!petStore[petID]) {
+//         petStore[petID] = { petID: "unknown", stock: additionalQuantity}
+//     } else {
+//     let  quantity =+ additionalQuantitiy;
+//     }
+// return petStore;
+// }
+
+function updateInventory(petStore, petID, additionalQuantity) {
+    if (!petStore[petID]) {
+        // Add a new pet type entry if it does not exist
+        petStore[petID] = { type: "Unknown", quantity: additionalQuantity };
+    } else {
+        // Update the quantity for an existing pet type
+        petStore[petID].quantity += additionalQuantity;
+    }
+
+    return petStore;
+}
+
+
+
+
+
+
+Exercise: Classroom Attendance Tracker
+Scenario: You are managing a classroom's attendance. Each student in the classroom is identified by a unique
+ ID. For each student, the classroom records their name and a list of dates when they were present.
+
+The classroom object might look like this:
+
+let classroom = {
+    1: { name: "Alice", attendance: ["2023-09-01", "2023-09-02"] },
+    2: { name: "Bob", attendance: ["2023-09-01"] }
+};
+
+
+Task: Write a function markAttendance that takes three parameters: classroom (the attendance object), 
+studentID (the ID of the student), and date (the date of attendance to be marked). The function should add 
+the date to the student's attendance array. If the student with the given studentID does not exist in the 
+classroom, the function should add a new student entry with studentID, an assumed name of "Unknown", and the
+ date in their attendance.
+
+Return the updated classroom attendance after the operation.
+
+
+// function markAttendance (classroom, studentID, date) {
+//     if (!classroom[studentID]) {
+//        classroom[studentID] = {name: "Unknown", attendance: [date]}
+//     }
+//     else {
+//         classroom[studentID][attendance].push(date);
+//     }
+// return classroom;
+// }
+
+function markAttendance(classroom, studentID, date) {
+    if (!classroom[studentID]) {
+        // Add a new student entry if it does not exist
+        classroom[studentID] = { name: "Unknown", attendance: [date] };
+    } else {
+        // Add the date to the attendance array for an existing student
+        classroom[studentID].attendance.push(date);
+    }
+
+    return classroom;
+}
+
+
+
+
+
+
+Exercise: Managing a Plant Nursery
+Scenario: You manage a plant nursery, and you need to keep track of various plants and their watering schedules. Each plant is identified by a unique ID, and for each plant, you store the last date it was watered.
+
+The nursery object looks like this:
+
+let nursery = {
+    1: { plantName: "Fern", lastWatered: "2023-10-01" },
+    2: { plantName: "Cactus", lastWatered: "2023-10-05" }
+};
+Task: Write a function updateWateringSchedule that takes three parameters: nursery (the object), plantID (the ID of the plant), and wateringDate (the date when the plant was last watered). The function should update the lastWatered date for the specified plant. If the plant with the given plantID does not exist in the nursery, the function should add a new plant entry with plantID, an assumed plantName of "Unknown", and the wateringDate.
+
+Your function should then return the updated nursery object.
+function updateWateringSchedule(nursery, plantID, wateringDate) {
+    // Check if the plant with the given plantID exists in the nursery
+    if (!nursery[plantID]) {
+        // If the plant doesn't exist, create a new entry with the plantID
+        nursery[plantID] = { plantName: "Unknown", lastWatered: wateringDate };
+    } else {
+        // If the plant exists, update the lastWatered date
+        nursery[plantID].lastWatered = wateringDate;
+    }
+
+    return nursery;
+}
+
+
+
+
+
+
+// // Setup
+// const recordCollection = {
+//     2548: {
+//       albumTitle: 'Slippery When Wet',
+//       artist: 'Bon Jovi',
+//       tracks: ['Let It Rock', 'You Give Love a Bad Name']
+//     },
+//     2468: {
+//       albumTitle: '1999',
+//       artist: 'Prince',
+//       tracks: ['1999', 'Little Red Corvette']
+//     },
+//     1245: {
+//       artist: 'Robert Palmer',
+//       tracks: []
+//     },
+//     5439: {
+//       albumTitle: 'ABBA Gold'
+//     }
+//   };
+  
+//   // Only change code below this line
+//   function updateRecords(records, id, prop, value) {
+//   if (value === "") {
+//     delete recordCollection[prop];
+//   }
+//   // If prop isn't tracks and value isn't an empty string, assign the value to that album's prop.
+//   else if (prop !== 'tracks' && value !== "") {
+//     recordCollection[id][prop] = value;
+  
+//   // If prop is tracks and value isn't an empty string, you need to update the album's tracks array. First, if the album does not have a tracks property, assign it an empty array. Then add the value as the last item in the album's tracks array.
+//   //  ;
+//   } else if (prop === 'tracks' && value !== "") {
+//   recordCollection[id][tracks] = tracks[];
+//   tracks.push(value);
+//   }
+//    return records;
+//   }
+//   updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+
+
+
+// // It's important to use recordCollection[id][prop] instead of recordCollection[prop]
+// //  to target the specific album's property.
+//  // Only change code below this line
+//  function updateRecords(records, id, prop, value) {
+//   if (value === "") {
+//     delete recordCollection[id][prop];
+//   }
+
+//   // If prop isn't tracks and value isn't an empty string, assign the value to that album's prop.
+//   else if (prop !== 'tracks' && value !== "") {
+//     recordCollection[id][prop] = value;
+  
+//   // If prop is tracks and value isn't an empty string, you need to update the album's tracks array. First, if the album does not have a tracks property, assign it an empty array. Then add the value as the last item in the album's tracks array.
+//   //  ;
+//   } else if (prop === 'tracks' && value !== "") {
+//     recordCollection[id].hasOwnProperty('tracks') {
+//      recordCollection[id].tracks = [];
+//     recordCollection[id].tracks.push(value);
+//   }
+// }
+//    return records;
+//   }
+//   updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+
+
+// // Setup
+// const recordCollection = {
+//   2548: {
+//     albumTitle: 'Slippery When Wet',
+//     artist: 'Bon Jovi',
+//     tracks: ['Let It Rock', 'You Give Love a Bad Name']
+//   },
+//   2468: {
+//     albumTitle: '1999',
+//     artist: 'Prince',
+//     tracks: ['1999', 'Little Red Corvette']
+//   },
+//   1245: {
+//     artist: 'Robert Palmer',
+//     tracks: []
+//   },
+//   5439: {
+//     albumTitle: 'ABBA Gold'
+//   }
+// };
+
+
+
+
+
+
+
+
+// // Only change code below this line
+// function updateRecords(records, id, prop, value) {
+// if (value === "") {
+//   delete records[id][prop];
+// }
+// // If prop isn't tracks and value isn't an empty string, assign the value to that album's prop.
+// else if (prop !== 'tracks' && value !== "") {
+//   records[id][prop] = value;
+
+// // If prop is tracks and value isn't an empty string, you need to update the 
+// // album's tracks array. First, if the album does not have a tracks property, assign 
+// // it an empty array. Then add the value as the last item in the album's tracks array.
+
+// } else if (prop === 'tracks') {
+//   records[id].hasOwnProperty('tracks') ||
+// }
+//  && value !== "") {
+//   {
+//     records[id].tracks = [];
+// }
+// records[id].tracks.push(value);
+// }
+//  return records;
+// }
+// updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+
+
+
+// // Setup
+// const recordCollection = {
+//   2548: {
+//     albumTitle: 'Slippery When Wet',
+//     artist: 'Bon Jovi',
+//     tracks: ['Let It Rock', 'You Give Love a Bad Name']
+//   },
+//   2468: {
+//     albumTitle: '1999',
+//     artist: 'Prince',
+//     tracks: ['1999', 'Little Red Corvette']
+//   },
+//   1245: {
+//     artist: 'Robert Palmer',
+//     tracks: []
+//   },
+//   5439: {
+//     albumTitle: 'ABBA Gold'
+//   }
+// };
+
+
+
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+if (value === "") {
+  delete records[id][prop];
+}
+// If prop isn't tracks and value isn't an empty string, assign the value to that album's prop.
+else if (prop !== 'tracks' && value !== "") {
+  records[id][prop] = value;
+
+// If prop is tracks and value isn't an empty string, you need to update the album's tracks array. 
+} else if (prop === 'tracks' && value !== "") {
+  
+  if (!records[id].hasOwnProperty('tracks')) {
+  records[id].tracks = [];
+ 
+}
+records[id].tracks.push(value);
+}
+ return records;
+}
+updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+
+
+
+
+// Simplified Challenge: Book Borrowing and Returning
+// Scenario: You have a library object where each book is identified by a unique bookId. Each book object contains the book's title, author, and a boolean flag isAvailable indicating 
+// if the book is available or currently borrowed.
+
+// Task: Write a function manageLibrary that takes three parameters: library (the library object), bookId (the ID of the book), and action (a string that can be either 'borrow' or 'return').
+//  The function should:
+
+// If action is 'borrow', change the isAvailable status of the specified book to false.
+// If action is 'return', change the isAvailable status of the specified book to true.
+// The function should return the updated library object.
+// Example:
+
+const library = {
+  1: { title: "1984", author: "George Orwell", isAvailable: true },
+  2: { title: "To Kill a Mockingbird", author: "Harper Lee", isAvailable: false },
+  3: { title: "The Great Gatsby", author: "F. Scott Fitzgerald", isAvailable: true }
+}
+
+// manageLibrary(library, 1, 'borrow');
+// This call should set the isAvailable property of the book with bookId 1 to false.
+
+
+function manageLibrary(library, bookId, action) {
+  // If action is 'borrow', change the isAvailable status of the specified book to false.
+if (action === 'borrow') {
+library[bookId].isAvailable = false;
+} else if (action === 'return') {
+  library[bookId].isAvailable = true;
+} else {
+  return 'incorrect data'
+}
+// If action is 'return', change the isAvailable status of the specified book to true.
+
+// The function should return the updated library object.
+
+return library;
+}
+
+
+
+
+
+
+// Challenge: Video Store Management
+// Scenario: You're managing a video store where you keep a collection of movies. Each movie in the store is represented by an object with properties: title, director, rating, and isAvailable 
+// (a boolean indicating if the movie is available for rent).
+
+// The videoStore object might look like this:
+
+
+// const videoStore = {
+//     1: { title: "Inception", director: "Christopher Nolan", rating: 8.8, isAvailable: true },
+//     2: { title: "The Godfather", director: "Francis Ford Coppola", rating: 9.2, isAvailable: false },
+//     3: { title: "Pulp Fiction", director: "Quentin Tarantino", rating: 8.9, isAvailable: true }
+// };
+// Task: Write a function manageVideoStore that takes three parameters: videoStore (the video store object), movieId (the ID of the movie), and action (a string that can be either 'rent' or 
+// 'return'). The function should:
+
+// If action is 'rent', change the isAvailable status of the specified movie to false.
+// If action is 'return', change the isAvailable status of the specified movie to true.
+// The function should return the updated videoStore object.
+
+
+
+manageVideoStore(videoStore, 1, 'rent');
+This call should set the isAvailable property of the movie with movieId 1 to false.
+
+
+
+
+
+
+
+
+
+// Challenge: Book Library Management
+// Scenario: You are managing a small library system. The library has a collection of books, each 
+// identified by a unique ID. For each book, the system stores the book's title, author, and a boolean flag indicating whether the book is currently available or borrowed.
+
+// The library object could look like this:
+
+
+const library = {
+    1: { title: "1984", author: "George Orwell", isAvailable: true },
+    2: { title: "To Kill a Mockingbird", author: "Harper Lee", isAvailable: false },
+    3: { title: "The Great Gatsby", author: "F. Scott Fitzgerald", isAvailable: true }
+};
+
+// Task: Write a function manageLibrary that takes four parameters: library (the library object), bookId (the ID of the book), action (a string that can be either 'borrow' or 'return'), 
+// and newBook (an object representing a new book to be added to the library, applicable only if action is 'add'). The function should:
+
+If action is 'borrow', change the isAvailable status of the specified book to false.
+If action is 'return', change the isAvailable status of the specified book to true.
+If action is 'add', add the newBook to the library with a unique bookId. Assume newBook has properties title, author, and isAvailable.
+The function should return the updated library object.
+Example:
+
+function manageLibrary(library, bookId, action) {
+  let action == 'borrow' if {
+
+  }
+  let action == 'return' if {
+
+  }
+}
+
+
+let newBook = { title: "The Catcher in the Rye", author: "J.D. Salinger", isAvailable: true };
+library = manageLibrary(library, 4, 'add', newBook);
+// After adding a book, library should include the new book.
+
