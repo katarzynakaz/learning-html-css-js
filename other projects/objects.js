@@ -711,3 +711,109 @@ function joinCatCafe(candiate) {
   }
   }
 
+// Change the Prototype to a New Object
+Cat.prototype.numLegs = 4,
+
+Cat.prototype.hungry = function() {
+  console.log("meow");
+}
+
+Cat.prototype.describe = function90 {
+  console.log("my name is" + this.name);
+}
+
+//individual addition to prototype
+// instead to make quicker create an object
+
+Cat.prototype = {
+  numLegs: 4,
+  hungry: function() {
+    console.log("meow")
+  },
+  describe: function() {
+    console.log("my name is" + this.name);
+  }
+};
+
+// this updates the blueprint but link with constructor is lost and needs to be added manually
+
+// Remember to Set the Constructor Property when Changing the Prototype
+ragdfoll.constructor === Cat; //false
+ragdoll.constructor === Object; //auto true
+ragdoll instanceof Cat; true
+
+
+// so edit!!
+Cat.prototype = {
+  ...
+  constructor: Cat,
+}
+
+
+// Just like people inherit genes from their parents, an object inherits its prototype directly from the
+//  constructor function that created it.
+function Cat(name) {
+  this.name = name;
+}
+
+let ragidkk = new Cat("Wafel");
+
+Cat.prototype.isPrototypeOf(ragdoll);
+
+ConstructorFunction.prototype.isPrototypeOf(whatObjectIsChecked);
+
+// ecause a prototype is an object, a prototype can have its own prototype! In this case, the prototype 
+// of Bird.prototype is Object.prototype:
+
+Object.prototype.isPrototypeOf(Cat.prototype);
+
+// Use Inheritance So You Don't Repeat Yourself DRY
+create supertype or parent
+
+Cat.prototype = {
+  constructor: Cat,
+  describe: function () {
+    console.log("I am " + this.name;)
+  }
+}
+
+// if describe is also in another object then
+
+function Pet() { };
+
+Pet.prototype = {
+  constructor: Pet,
+  describe: function() {
+    console.log("I am " + this.name);
+  }
+}
+
+// then method describe can be removed from cat
+
+Cat.prototype = {
+  constructor: Cat
+};
+
+
+// Inherit Behaviors from a Supertype
+// reuse inside multiple  objects to not define again
+let animal = Object.create(Animal.prototype);
+
+Object.create(prototypeOfObject)
+
+
+//Set the Child's Prototype to an Instance of the Parent
+function Animal() {}
+ 
+Animal.prototype = {
+  contstructor: Animal,
+  eat: function() {
+    console.log("Feed me");
+  }
+}
+
+function Cat() {}
+
+Cat.prototype = Object.create(Animal.prototype);
+let ragdoll = new Cat();
+
