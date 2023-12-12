@@ -649,7 +649,7 @@ myHouse instanceof House;
 
 fucntion Cat(name) {
   this.name = name;
-  this.numLegs = 4;
+  this.tail = 1;
 }
 
 let ragdoll = new Cat("Laser");
@@ -666,3 +666,48 @@ for (let property in cat) {
 }
 
 console.log(ownProps);
+
+
+// Use Prototype Properties to Reduce Duplicate Code
+// properties in prototype are shared in all instances of Cat
+Cat.prototype.numLegs = 4;
+
+
+
+// Own properties are defined directly on the object instance itself. 
+// And prototype properties are defined on the prototype.
+function Cat(name) {
+  this.name = name //own property
+}
+
+Cat.prototype.numTails = 1; //prot property
+
+let ragdoll = new Cat("Laser");
+
+// push array props to own and prototype
+let ownProps = [];
+let prototypeProps = [];
+
+for (let property in ragdoll) {
+  if (ragdoll.hasOwnProperty(property)) {
+    ownProps.push(property);
+  } else {
+    prototypeProps.push(property);
+  }
+}
+
+console.log(ownProps);
+console.log(prototypeProps);
+
+// constructor property
+// is like alabe to chek if instace was built using constructor function
+console.log(ragdoll.constructor === Cat);
+// will display true
+function joinCatCafe(candiate) {
+  if (candiate.constructor === Cat) {
+    return true;
+  } else {
+    return false;
+  }
+  }
+
