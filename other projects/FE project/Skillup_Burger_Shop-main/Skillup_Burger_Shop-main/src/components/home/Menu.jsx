@@ -1,42 +1,51 @@
 // Write all the code here
-// Create a menu card of the items with the item number, image source, price, title, a function handler for
-// adding to cart, and a delay for animation.
 
+// links
 import React from 'react';
 import '../../styles/menu.scss'; 
 
-const menuItems = [
-    {
-      itemNumber: 1,
-      imageSrc: 'path_to_image1.jpg',
-      price: 10.99,
-      title: 'Cheeseburger',
-    },
-    {
-      itemNumber: 2,
-      imageSrc: 'path_to_image2.jpg',
-      price: 8.99,
-      title: 'Veggie Burger',
-    },
-    // Add more menu items as needed
-  ];
+
+// functions
+function addedToCart() {
+  alert("Added to cart");
+  }
+
+
+// Create a menu card of the items with the item number, image source, price, title, a function handler for
+// adding to cart, and a delay for animation.
+
+//create div for menu
+/* divs for individual burgers, animation transition added in scss */
+// component - menu card
+
+const Menu = () => {
+  return (
+<div id="menu">
+  <h1>Menu</h1>
+    <div className="menuCard">
+      <h5>Cheeseburger</h5>
+      <p>£9.99</p>
+      <img src="../../burger1.png" alt="Cheeseburger" />
+      <button onClick = {addedToCart}>Buy Now</button>
+    </div>
+
+    <div className="menuCard">
+      <h5>Double Bacon Cheeseburger</h5>
+      <p>£11.99</p>
+      <img src="../../burger2.png" alt="Double Bacon Cheeseburger" />
+      <button onClick = {addedToCart}>Buy Now</button>
+    </div>
+
+    <div className="menuCard">
+      <h5>Vegan Burger</h5>
+      <p>£10.99</p>
+      <img src="../../burger3.png" alt="Vegan Burger" />
+      <button onClick = {addedToCart}>Buy Now</button>
+    </div>
+
+</div>
+  )};
+
   
-  const Menu = () => {
-    return (
-      <div>
-        <h1>Menu</h1>
-        <div className="menu-container">
-          {menuItems.map((item) => (
-            <div className="menu-item" key={item.itemNumber}>
-              <img src={item.imageSrc} alt={item.title} />
-              <h2>{item.title}</h2>
-              <p>Price: ${item.price}</p>
-              <button onClick={() => alert(`Added ${item.title} to cart`)}>Add to Cart</button>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
-  
-  export default Menu;
+
+

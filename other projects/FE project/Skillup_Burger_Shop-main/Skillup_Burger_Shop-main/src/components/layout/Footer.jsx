@@ -1,7 +1,7 @@
 // Write all the code here
 // Create a social media bar with links to YouTube and Instagram, using anchor tags and icons from the react-
 // icons/ai library
-
+import React from 'react';
 import { AiFillYoutube, AiFillInstagram } from 'react-icons/ai';
 import './Footer.scss';
 

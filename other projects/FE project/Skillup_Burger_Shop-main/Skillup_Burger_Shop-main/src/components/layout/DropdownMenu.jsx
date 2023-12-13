@@ -1,52 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
 
 function DropdownMenu() {
-  const [navLinks, setNavLinks] = useState([]);
+    const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    const navs = [
-      { name: "Login", path: "/login" },
-      {name:"Orders", path:"/myorders"},
-      {name:"Logout", path:"/login"}
-      
-    ];
-    setNavLinks(navs);
-  }, []);
+    function toggleDropdown() {
+        setIsOpen(!isOpen);
+    }
 
-  return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div className="container">
-          <a className="navbar-brand" href="#">
-          
-          </a>
-          <div class="btn-group">
-            <button
-              type="button"
-              class="btn btn-primary dropdown-toggle"
-              data-bs-toggle="dropdown"
-              data-bs-display="static"
-              aria-expanded="false"
-            >
-              Menu
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end">
-              {navLinks.map((d, i) => (
-                <li key={i}>
-                  <Link to={d.path}>
-                    <button class="dropdown-item" type="button">
-                      {d.name}
-                    </button>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+    function navigate(path) {
+        window.location.href = path;
+    }
+
+    return (
+        <div className="dropdown">
+            <button className="dropdown-toggle" onClick={toggleDropdown}>Menu</button>
+            {isOpen && (
+                <div className="dropdown-menu">
+                    <div className="dropdown-item" onClick={function() { navigate('/login'); }}>Login</div>
+                    <div className="dropdown-item" onClick={function() { navigate('/myorders'); }}>Orders</div>
+                    <div className="dropdown-item" onClick={function() { navigate('/logout'); }}>Logout</div>
+                </div>
+            )}
         </div>
-      </nav>
-    </div>
-  );
+    );
 }
 
 export default DropdownMenu;

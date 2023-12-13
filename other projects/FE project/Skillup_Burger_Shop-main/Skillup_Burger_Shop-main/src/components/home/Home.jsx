@@ -11,10 +11,9 @@ const Home = () => {
     return (
       <div>
         <Header />
-        {/* Other homepage content */}
         <Footer />
       </div>
     );
   };
 
-
+export default Home;
