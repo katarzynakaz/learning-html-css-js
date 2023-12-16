@@ -473,3 +473,59 @@ var magic = function() {
 };
 
 const magic = () => new Date;
+
+
+// arrow functions with parameters
+const myCats = function(cat1, cat 2) {
+  return cat1.myCats(cat2);
+}
+
+const myCats = (cat1, cat2) =>cat1.myCats(cat2);
+
+
+
+// Set Default Parameters for Your Functions
+
+const greeting = (name = "You") => "Hello " + name;
+console.log(greeting();
+
+// you will display unless enetered
+
+
+// Use the Rest Parameter with Function Parameters
+// With the rest parameter, you can create functions that take a variable number 
+// of arguments. These arguments are stored in an array that can be accessed later from 
+// inside the function.
+
+
+// rest`
+rest returns as array
+ 
+function garden(...args) {
+
+}
+
+function what(...args) {
+  return [] if no args empty
+}
+console.log(howMany("hello", null, 42, true, { name: "Alice" }));
+
+
+const sum = (x, y, z) => {
+  const args = [x, y, z];
+  let total = 0;
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
+  }
+  return total;
+}
+
+
+const sum = (...args) => { 
+  let total = 0; 
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
+  } 
+  return total;
+}
+
