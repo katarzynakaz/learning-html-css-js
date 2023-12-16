@@ -461,3 +461,15 @@ In the checkSign function, use multiple conditional operators - following the re
 function checkSign(num) {
   return (num > 0) ? "positive" : (num < 0) ? "negative" : "zero";
  }
+
+
+
+
+
+//  arrow function
+
+var magic = function() {
+  return new Date();
+};
+
+const magic = () => new Date;

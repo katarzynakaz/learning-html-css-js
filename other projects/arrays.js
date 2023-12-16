@@ -395,3 +395,31 @@ lookUpProfile("Akira", "likes");
 
 
 wrong!!
+
+
+
+// mutate array 
+const s = [5, 6, 7];
+s[2] = 45;
+console.log(s);
+5 6 45
+
+
+
+// freeze object - const does not protect from mutation
+
+let obj = {
+  name: "Laser",
+  age: 9,
+}
+
+Object.freeze(obj);
+obj.name = "Pus";
+obj.newProp = "1 tail";
+same returned
+
+
+
+
+
+
