@@ -2,23 +2,27 @@
     margin: 0 auto;
   }
   
+  header{
+  text-align: center;
+  color: #004666;
+  }
+  
   body {
     font-family: sans-serif;
     size: 1rem;
     color: white;
     font-weight: light;
+    background-color: #e6f7ff;
   }
   
   .form-group {
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 29%, rgba(6,84,170,1) 56%, rgba(9,9,121,1) 97%, rgba(0,212,255,0.2049194677871149) 98%);
+  background: rgb(0,212,255);
+  background: linear-gradient(90deg, rgba(0,212,255,0.2049194677871149) 2%, rgba(116,174,238,1) 22%, rgba(2,0,36,1) 89%);
+  display: block;
+  margin: auto;
+  width: 50%;
+  border: 3px;
+  padding: 10px;
+  text-align: center;
   }
   
-  survey-form {
-    display: block;
-    background: 68a4e8;
-    margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
-  }
