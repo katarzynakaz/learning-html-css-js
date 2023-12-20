@@ -180,5 +180,31 @@ btn.addEventListener("click", logParagr)
 
 
 
-// week 5 
+// week 5
+// nesting selectors
+
+// HTMLAllCollection
+// <div>
+//    <img src="https://google.com"></img>
+// </div>
+
+
+
+// html Element
+{/* <button id="shopping-cart">Add to cart</button>
+<div id="shopping-cart"></div> */}
+const shoppingCartButton = document.getElementById("shopping-cart-button");
+
+function addToCart() {
+
+   const myItem = "orange";
+   const shoppingCart = document.getElementById("shopping-cart");
+   const newElement = "document.createElement("p");
+   newElement.innerText = myItem;
+
+   shoppingCart.appendChild(newElement)
+
+}
+
+addToCart("apple");
 
