@@ -150,7 +150,7 @@ Assignment
 list that loops throigh items in a list and outputs them 
 
 
-// week 5
+// week 4
 
 <h1 id="my-text">Hello world</h1>
 <p class="text-normal">One</p>
@@ -162,13 +162,23 @@ const myElement = document.getElementById("my-text")
 const paragraphs = document.getElementsByClassName("text-normal")
 
 function logPargr() {
-
-
-
 for (let i = 0; i < paragraphs.length; i++) {
 console.log(paragraphs[i])
 };
 }
 
-// only one button so can find this way
-const btn = document.querySelector()
+// only one button so can find this way target by html
+const btn = document.querySelector("button")
+console.log(btn)
+
+// add event listener, add 2 arguments 
+btn.addEventListener("click", logParagr)
+
+// alternative in html
+<button onClick="logParagr()">Click me</button>
+
+
+
+
+// week 5 
+
