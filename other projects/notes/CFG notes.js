@@ -148,3 +148,27 @@ splice - add or remove from anywhere within the array
 
 Assignment
 list that loops throigh items in a list and outputs them 
+
+
+// week 5
+
+<h1 id="my-text">Hello world</h1>
+<p class="text-normal">One</p>
+<p clas="text-normal">Two</p>
+<p class="text-normal">Three</p>
+<button>Click me</button>
+
+const myElement = document.getElementById("my-text")
+const paragraphs = document.getElementsByClassName("text-normal")
+
+function logPargr() {
+
+
+
+for (let i = 0; i < paragraphs.length; i++) {
+console.log(paragraphs[i])
+};
+}
+
+// only one button so can find this way
+const btn = document.querySelector()
