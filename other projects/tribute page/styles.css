@@ -1,0 +1,30 @@
+ #image {
+    margin: 0 auto;
+    display: block;
+    height: auto;
+    max-width: 60%;
+    height: 60vh;
+  }
+
+  main {
+    text-align: center;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+
+  #tribute-info {
+    display: block;
+    background: #D5FCB8;
+    margin: 20px 300px;
+  }
+
+  h1 {
+    color: #635F5E;
+    background: #E6FCC2;
+  }
+
+  
+   /* {
+    backgroud: #FFF9E0
+  } */
