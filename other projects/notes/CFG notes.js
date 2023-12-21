@@ -204,7 +204,7 @@ function addToCart() {
 
    shoppingCart.appendChild(newElement)
 
-}
+}/.,mjnhgfdswq23w4e5r6t5y6ui8/][p;lokijuhygfdsa]
 
-addToCart("apple");
+addToCart("apple");9+54
 

@@ -1,0 +1,55 @@
+@media only screen and (max-width: 600px) {
+    .main-section {
+      display: none;
+    }
+  } 
+  
+header {
+    font-weight: bold;
+}
+
+
+body {
+    margin: 0;
+}
+
+#nav-container {
+    display: flex;
+}
+
+#navbar {
+    flex-direction: column;
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#navbar header {
+    margin-bottom: 20px;
+}
+
+.nav-link {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+}
+
+#main-doc {
+    flex: 3;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-section {
+    margin-bottom: 20px;
+}
+
+header {
+    font-weight: bold;
+}
