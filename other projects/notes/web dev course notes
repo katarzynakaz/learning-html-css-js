@@ -1,0 +1,38 @@
+// DOM
+// to view classes
+
+document.querySelector("button").classList;
+
+// too add remove or toggle
+
+document.querySelector("button").classList.add("invisible");
+
+document.querySelector("button").classList.remove("invisible");
+
+document.querySelector("button").classList.toggle("invisible");
+// iff applied remove if not apply
+
+
+Manipulate style
+// Separation of concerns manipulating css in JS
+// add class to css 
+// add class in js to element
+
+.huge {
+    font-size: 20rem;
+    text-color: navy;
+}
+
+document.querySelector("p").classList.add("huge");
+
+
+Manipulate text
+// inner htom vs text content
+// inner html all html inside alelemnt's tags 
+
+document.querySelector("h1").innerHTML = "<em>Good Bye</em>"; 
+// specify as string 
+
+Manipulate attributes
+// class, screen, href
+
