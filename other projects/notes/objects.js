@@ -608,12 +608,22 @@ function Bird(name, color) {
   this.numLegs = 2;
 }
 
+// to nintialise object
 let cardinal = new Bird("Bruce", "red")
 
 cardinal.name
 cardinal.color
 cardinal.numLegs
 
+
+function BellBoy(name, age, permit, languages) {
+  this.name = name;
+  this.age = age;
+  this.permit = permit;
+  this.languages = languages;
+}
+
+let bellBoy1 = new BellBoy("Timmy", 21, false, ["French", "Polish"]);
 
 // The constructor is more flexible. It's now possible to define the properties for each Bird at the time 
 // it is created, which is one way that JavaScript constructors are so useful. They group objects together

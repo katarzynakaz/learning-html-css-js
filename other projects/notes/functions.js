@@ -531,8 +531,7 @@ const sum = (...args) => {
 
 
 
-
-
+// HIGHER ORDER FUNCTIONS
 // using functions as parameters
 
 function add(num1, num2) {
@@ -549,3 +548,31 @@ function calculator (num1, num2, operator) {
 
 calculator(3, 5, add);
 calculator(4. 6, multiply);
+
+
+// debugger in chrome
+debugger;
+calculator(4. 6, multiply);
+
+
+function add(num1, num2) {
+  return num1 + num2;
+}
+
+function subtract( num1, num2) {
+  return num1 - num2;
+}
+
+function multiply (num1, num2) {
+  return num1 * num2;
+}
+
+function divide(num1, num2) {
+  return num1 / num2;
+}
+
+function calculator(num1, num2, operator) {
+  return operator(num1, num2);
+}
+
+

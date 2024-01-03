@@ -190,5 +190,71 @@ for (i = 0; i < numberOfDrumButtons, i++) {
 
 
 
+// play sound
+
+let numberOfDrumButtons = document.querySelectorAll(".drum").length;
+
+for (i = 0; i < numberOfDrumButtons, i++) {
+
+    document.querySelector("button")[i].addEventListener("click", function () {
+        
+        let audio = new Audio("sounds/tom-1.mp3");
+        audio.play();
+    });
+
+}
+
+// create new html audio element object and use method like play 
+
+
+
+//  play sound assosciated to each background image in css
+// when button detects click run function, know who triggered the event
+
+let numberOfDrumButtons = document.querySelectorAll(".drum").length;
+
+for (i = 0; i < numberOfDrumButtons, i++) {
+
+    document.querySelector("button")[i].addEventListener("click", function () {
+
+
+        this.style.color = "white";
+        // to changee colot to button to white
+        
+        let audio = new Audio("sounds/tom-1.mp3");
+        audio.play();
+    });
+
+}
+
+
+
+let numberOfDrumButtons = document.querySelectorAll(".drum").length;
+
+for (i = 0; i < numberOfDrumButtons, i++) {
+
+    document.querySelector("button")[i].addEventListener("click", function () {
+
+
+       let buttonInnerHTML = this.innerHTML;
+        
+
+       case "w":
+            let audio = new Audio("sounds/tom-1.mp3");
+             audio.play();
+             break;
+
+        case "":
+
+        default;
+    });
+
+}
+
+//change audio to specific sound
+
+//add default to switch
+
+
 
 
