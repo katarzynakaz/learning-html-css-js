@@ -625,6 +625,54 @@ function BellBoy(name, age, permit, languages) {
 
 let bellBoy1 = new BellBoy("Timmy", 21, false, ["French", "Polish"]);
 
+//object can have associated function - object has a method (function associated with an object) - call a method - bellBy move
+ 
+let bellBoy1 = {
+  name: "Timmy",
+  age: 21,
+  permit: false;
+  languages: ["French", "Polish"],
+  moveSuitcase: function () {
+      alert("I will take your suitcase");
+      phoneticLookup();
+      this.moveSuitcase();
+  }
+}
+
+
+bellBoy1.moveSuitcase();
+
+// to incorporate method to constructor add this 
+this.moveSuitcase = function () {
+  alert("I will take your suitcase");
+  phoneticLookup();
+  this.moveSuitcase();
+
+
+
+//object can have associated function - object has a method (function associated with an object) - call a method - bellBy move
+  function BellBoy(name, age, permit, languages) {
+    this.name = name;
+    this.age = age;
+    this.permit = permit;
+    this.languages = languages;
+    this.moveSuitcase = function () {
+      alert("I will take your suitcase");
+      phoneticLookup();
+      this.moveSuitcase();
+  }
+}
+
+// to call
+bellBoy1.moveSuitcase();
+
+
+
+
+  
+
+
+
 // The constructor is more flexible. It's now possible to define the properties for each Bird at the time 
 // it is created, which is one way that JavaScript constructors are so useful. They group objects together
 //  based on shared characteristics and behavior and define a blueprint that automates their creation.
