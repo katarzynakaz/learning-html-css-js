@@ -1,0 +1,71 @@
+ls 
+lists all items in directory 
+
+~ where i am 
+
+cd
+change directory 
+
+lvl down 
+cd Documents/ 
+
+start typing and hit tab to autofill 
+
+cd Learn
+
+
+cd ~ 
+root
+
+
+navigate to path
+cd Documents/Learn/Languages
+
+up and down button 
+up for last command
+
+
+back to parent
+cd ..
+
+to edit typos alt and click
+ctrl a beginning
+ctrl e end
+
+clear cmd ithout executing ctrl u 
+
+
+create new folder
+mkdir Kaska
+enter
+
+cd Kaska
+
+create file inside
+touch Text2.txt 
+
+open using default app
+start text2.txt
+
+
+to specify what app 
+code Text2.txt
+open in vs code
+
+
+delete files inside folder
+rm Text.rtf
+
+remove all files - be inside dir
+to check where i am 
+pwd
+
+rm * 
+
+remove folders 
+rm -r to remove directory 
+rm -r Kaska/
+
+
+
+
