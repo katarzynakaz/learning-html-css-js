@@ -576,3 +576,66 @@ function calculator(num1, num2, operator) {
 }
 
 
+
+
+
+
+// CALLBACK Function
+
+document.addEventListener("keydown", respondToKey(event));
+
+function respondToKey(event) {
+  console.log("Key pressed.");
+}
+
+// wait to finish happening amd call back and execute
+// allows to wait to finish to gets called back
+
+
+//attach ev listener to this element $0
+$0addEventListener("click", function() {
+  console.log(event);
+})
+
+can console log event that triggered the handleClick
+
+
+callback function is called by event object that knows what event triggered the function 
+
+when event happens, object gets created based on that event
+
+pass object back thriugh callback 
+top get event object 
+to see ehat triggered the event listebner
+
+
+
+// add class in js 
+
+function buttonAnimation(currentKey) {
+  let activeButton = document.querySelector("." + currentKey);
+  activeButton.classList.add("pressed");
+}
+
+
+// timeout/ set timeout to apply class and remove class
+
+setTimeout(fucntion, miliseconds, param1, param2)
+
+
+function buttonAnimation(currentKey) {
+  let activeButton = document.querySelector("." + currentKey);
+
+  activeButton.classList.add("pressed");
+
+  setTimeout(function() {
+    activeButton.classList.remove("pressed");
+  }, 100);
+}
+}
+
+// it will also work for keypress
+
+
+
+
