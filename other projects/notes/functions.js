@@ -529,3 +529,23 @@ const sum = (...args) => {
   return total;
 }
 
+
+
+
+
+// using functions as parameters
+
+function add(num1, num2) {
+  return num1 + num2;
+}
+
+function multiply(num1, num2) {
+  return num1 * num2;
+}
+
+function calculator (num1, num2, operator) {
+  operator(num1, num2);
+}
+
+calculator(3, 5, add);
+calculator(4. 6, multiply);
