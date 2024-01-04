@@ -22,3 +22,22 @@ npm install
 to instal more
 npm i kasbfgd kndffhgfh bdjhdb
 
+
+
+
+
+
+
+to instal package 
+npm install xxxxx
+
+node index.js
+
+in package.json add   "type": "module",
+
+in index
+import superheroes from "superheroes";
+
+const name = superheroes.random();
+
+console.log(`My superhero name is ${name}.`);

@@ -1,0 +1,159 @@
+// DOM 
+// browser converts to document object model to interface with dom via javascript
+
+// window.location - obj with info
+
+// window global variable
+// navigator - higher level (audio MediaKeySystemAccess, gps, device specific)
+
+
+// document - contain all html open to close
+
+
+
+// DOM placement
+// before </body> so htms is downlaoded and parsed to page 
+<script src="./the-dom.js"></script>
+
+
+
+// to access element - first matching
+const p = document.querySelector(`p`);
+console.log(`p`);
+
+
+const divs = document.querySelectorAll(`div.item`);
+console.log(divs);
+// all matching selector, willl search through the entire page
+
+
+const item2 = document.querySelector(`.item2`);
+const item2Image = item2.querySelector(`img`);
+//look inside element you already have
+
+console.log(item2);
+
+// to narrow focus got to selector or swearch inside a wrapper for another selector 
+
+// quierySelector + all ones to use 
+
+
+
+
+// ELEMENT PROP AND METHODS
+
+const item2 = document.querySelector(`.item2`);
+const item2Image = item2.querySelector(`img`);
+
+// object with props and methods
+
+
+
+// getter
+console.log(pic.naturalWidth)
+
+// setter
+pic.alt = 'Cute Cat';
+
+
+textContent // includes all of the elements all <> 
+innerText // only shows human readable elements
+innerHTML //shows all content inside
+outerHTML // shows outer tags and white space
+
+//to add extra text
+<p class = "pizza">I ate all pizza!</p>
+
+//to add to end
+const pizzaList = document.querySelector(`pizza`);
+console.log(pizzaList.textContent);
+
+pizzaList.textContent = `${pizzaList.textContent} and ice cream`;
+
+//slow at loading so use instead (as browser rerencders all page)
+//best way to add text is:
+pizzaList.insertAdjacentText(`beforeend`, ` and ice cream`);
+
+// beforebegin - before element
+// afterbegin - inside in front
+// beforeend
+// afterend
+
+
+// element vs Node
+// all is node not all is element
+// elelment has properties and method, something wrapped in a tag, is a tag on a page
+
+
+
+
+// method - fucntion we run against an elelment, like querySelector
+
+
+// classes
+
+const pic = document.querySelector(`.nice`);
+pic.classList.add(`open`);
+pic.classList.remove(`open`);
+
+console.log(pic.classList);
+
+
+//toggle class on and off
+
+function toggleRound() {
+    pic.classList.toggle(`round`);
+}
+
+pic.addEventListener(`click`, toggleRound);
+
+
+
+
+// atributes - anything that's proovided to element as additional info, classes, src, alt
+// .notation 
+//most are bioth getters and setters
+pic.alt = `Cute Cat`;
+pic.width = 300;
+
+pic.setAttribute(`alt`, `really cute cat`);
+console.log(pic.getAttribute(`alt`));
+
+
+//custom - do not make attributes
+
+
+
+// create html elements with js
+const myParagtaph = document.createElemenr(`p`);
+console.log(myParagtaph);
+
+//not yet placed on page, only in memory
+// to add and remove atributes 
+
+myParagrph.textContent = `I am Kaska`
+myParagrph.classList.add(`cute`);
+console.log(myParagtaph);
+
+// to add to DOM
+const myImage = document.createElement(`img`);
+myImage.src = `https://googe.com`;
+myImage.alt = `cool pic`;
+
+
+const myDiv = document.createElement(`div`);
+myDiv.classList.add(`wrapper`);
+console.log(myDiv);
+
+//add to dom
+document.body.appendChild(myDiv);
+myDiv.appendChild(myParagrph);
+//do in reverse order as reflow happens - as dom modified
+
+// instead
+myDiv.appendChild(myParagrph);
+myDiv.appendChild(myImage);
+document.body,appendChild(myDiv);
+// this is fine only one reflow
+
+
