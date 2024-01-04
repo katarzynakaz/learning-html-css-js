@@ -1,0 +1,13 @@
+.exit nodejs
+
+ctrl + c 
+ctrl + c 
+twice to exit
+
+node is js runtime
+
+
+terminal - go to dir
+open folder with index.js
+node index.js
+
