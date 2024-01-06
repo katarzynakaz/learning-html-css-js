@@ -157,3 +157,34 @@ document.body,appendChild(myDiv);
 // this is fine only one reflow
 
 
+
+//create a list and add to dom
+<ul>
+    <li class="one">one</li>
+    <li class="two">two</li>
+    <li class="three">three</li>
+    <li class="four">four</li>
+    <li class="five">five</li>
+</ul>
+
+document.body.appendChild(`.three`)
+
+
+const list = document.createElement(`ul`);
+const li5 = document.createElement(`li`)
+
+li5.textContent = `five`;
+list.appendChild(li);
+document.body.insertAdjacentText(`beforeend`, li5);
+
+// repeat for all
+const li1 = li5.cloneNode(true);
+li1.textContent = `one`;
+list.insertAdjacentElement(`afterbegin`, li1);
+// to inject 
+
+
+
+//create html with strings
+
+
