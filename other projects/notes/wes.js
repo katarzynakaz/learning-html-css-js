@@ -45,5 +45,10 @@ function makeABaby(first, last) {
     return baby;
 }
 
+// resolution 
+// div canvas width and height twice as big as css (display on screen) 
+// for iphone or small cscreen high resolution px - double to get crisp look on page
+
+
 
 
