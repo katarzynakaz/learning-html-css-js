@@ -81,4 +81,5 @@ x = x - 10;
 y = y - 10;
 
 
-
+// querySelector select one Element
+// querySelectorAll sdelect multiple elements
